@@ -5,6 +5,29 @@
   padding: 0%;
   box-sizing: border-box;
   font-family: "DM Sans", sans-serif;
+}
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #8d8181;
+}
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #8d8181;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
   i{
     color: white;
     background-color: red;
@@ -16,7 +39,7 @@
   a{
     text-decoration: none;
   }
-}
+
 // header
 
 .container {
@@ -32,6 +55,7 @@
   background-size: cover;
   background-blend-mode: multiply;
   background-color: rgba(0, 0, 0, 0.5);
+
 }
 /* default css end */
 
@@ -63,7 +87,7 @@ a.site-logo {
   color: #fff;
   font-family: "DM Sans", sans-serif;
 
-  // padding: 20px;
+  padding: 20px;
   display: block;
   text-decoration: none;
 }
@@ -133,7 +157,7 @@ a.site-logo {
 .site-navbar ul {
   position: absolute;
   width: 100%;
-  height: calc(100vh - 60px);
+  height: 100vh;
   left: 0;
   top: 0px;
   flex-direction: column;
@@ -146,7 +170,7 @@ a.site-logo {
 .site-navbar ul li {
   width: 100%;
   // text-align: center;
-  // padding: 0.1em 0.3em !important;
+  padding: 0.1em 0.3em !important;
   margin: 3rem !important;
 }
 .site-navbar ul li a {
@@ -440,6 +464,31 @@ font-size: 18px;
   font-size: 45px;
   padding: 10% 13%;
   text-decoration: left;
+  .hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: black;
+  }
+  .hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+
+  }
+  
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    width: 100%;
+
+  }
 }
 
 @media only screen and (max-width:998px){
